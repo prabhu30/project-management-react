@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { Home, CreateProjectForm, ProjectDetails } from "./index";
 
-export default function Project({ onCreate, projects, showProjectIndex }) {
-  const [showHomePage, setShowHomePage] = useState(true);
-  const [showForm, setShowForm] = useState(false);
-
+export default function Project({
+  onCreate,
+  projects,
+  showForm,
+  showHomePage,
+  setShowForm,
+  setShowHomePage,
+  showProjectIndex,
+}) {
   function handleCreateProject() {
     setShowHomePage(false);
     setShowForm(true);
